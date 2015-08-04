@@ -188,13 +188,14 @@ namespace Crescendo.API {
         #region Unity Callbacks
 
         protected virtual void Awake() {
-            FindHurtboxes();
-
             movementCollider = GetComponent<CapsuleCollider>();
             movementCollider.isTrigger = false;
 
             triggerCollider = gameObject.AddComponent<CapsuleCollider>();
             triggerCollider.isTrigger = true;
+
+			// Moved below the assignment of both colliders, so that it can properly register hurtboxes
+			FindHurtboxes ();
 
             _rigidbody = GetComponent<Rigidbody>();
             _rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;

@@ -16,7 +16,7 @@ MonoBehaviour:
   respawnTag: Respawn
   HurtboxLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2560
   _respawnPlatformPrefab: Prefabs/Respawn Platform
   GenericPlayerData:
   - Color: {r: 1, g: 0, b: 0, a: 1}
